@@ -13,7 +13,7 @@ import { ArrowLeft } from 'lucide-react';
 import { TYPE_GRADIENTS } from '../constants';
 import { formatPokemonId } from '../utils/helpers';
 import '../styles/DetailPokemon.css';
-import Signature from '../Components/layout/Signature';
+import Signature from '../components/layout/Signature';
 
 export default function DetailPokemon() {
   const { pokemon: pokemonName } = useParams();
