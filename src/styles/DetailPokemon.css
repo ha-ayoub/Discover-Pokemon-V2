@@ -232,6 +232,28 @@
   text-align: center;
 }
 
+ footer {
+  width: 100%;
+  margin-top: 3rem;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+.developer_info {
+  margin: 0;
+  color: rgba(120, 118, 118, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.developer_info span {
+  font-weight: 600;
+  color: rgba(22, 91, 50, 0.4);
+  margin-left: 5px;
+}
+
 @media (max-width: 768px) {
   .detail-hero {
     flex-direction: column-reverse;
