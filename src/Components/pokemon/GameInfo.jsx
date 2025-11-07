@@ -70,7 +70,7 @@ export default function GameInfo({ species, pokemon }) {
                             <img
                                 src={habitatInfo.image}
                                 alt={habitatInfo.name}
-                                className="habitat-icon"
+                                className={`habitat-icon ${habitatInfo.name === 'Rare' ? 'habitat-icon-rare' : ''}`}
                             />
                             <span
                                 className="habitat-name"
@@ -81,7 +81,8 @@ export default function GameInfo({ species, pokemon }) {
                         </div>
                     </div>
                 )}
-
+            </div>
+            <div className="held-items-contains">
                 {heldItems.length > 0 && (
                     <div className="info-card full-width">
                         <h4>Held Items in Wild</h4>

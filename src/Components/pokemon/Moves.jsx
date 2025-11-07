@@ -1,23 +1,13 @@
 import { useState } from 'react';
 import '../../styles/Moves.css';
+import { filtreMoves } from '../../utils/helpers';
 
 export default function Moves({ moves }) {
+
   const [filter, setFilter] = useState('level-up');
   const [showAll, setShowAll] = useState(false);
 
-  const groupedMoves = moves.reduce((acc, moveData) => {
-    moveData.version_group_details.forEach(detail => {
-      const method = detail.move_learn_method.name;
-      if (!acc[method]) acc[method] = [];
-      
-      acc[method].push({
-        name: moveData.move.name,
-        level: detail.level_learned_at,
-        url: moveData.move.url,
-      });
-    });
-    return acc;
-  }, {});
+  const groupedMoves = filtreMoves(moves);
 
   if (groupedMoves['level-up']) {
     groupedMoves['level-up'].sort((a, b) => a.level - b.level);
@@ -31,25 +21,25 @@ export default function Moves({ moves }) {
       <div className="moves-header">
         <h3>Moves</h3>
         <div className="moves-filters">
-          <button 
+          <button
             className={`filter-btn ${filter === 'level-up' ? 'active' : ''}`}
             onClick={() => setFilter('level-up')}
           >
             Level Up
           </button>
-          <button 
+          <button
             className={`filter-btn ${filter === 'machine' ? 'active' : ''}`}
             onClick={() => setFilter('machine')}
           >
             TM/HM
           </button>
-          <button 
+          <button
             className={`filter-btn ${filter === 'egg' ? 'active' : ''}`}
             onClick={() => setFilter('egg')}
           >
             Egg Moves
           </button>
-          <button 
+          <button
             className={`filter-btn ${filter === 'tutor' ? 'active' : ''}`}
             onClick={() => setFilter('tutor')}
           >
@@ -76,7 +66,7 @@ export default function Moves({ moves }) {
       </div>
 
       {currentMoves.length > 10 && (
-        <button 
+        <button
           className="show-more-btn"
           onClick={() => setShowAll(!showAll)}
         >

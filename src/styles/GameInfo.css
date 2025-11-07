@@ -16,12 +16,6 @@
   padding: 1.5rem;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  transition: all 0.3s ease;
-}
-
-.info-card:hover {
-  background: rgba(255, 255, 255, 0.7);
-  transform: translateY(-2px);
 }
 
 .info-card.full-width {
@@ -109,19 +103,28 @@
 .habitat-info {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2.5rem;
 }
 
 .habitat-icon {
-  width: 84px;
-  height: 84px;
+  width: 94px;
+  height: 94px;
   object-fit: contain;
 }
 
+.habitat-icon-rare{
+  width: 120px;
+  height: 100px;
+}
+
 .habitat-name {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   text-transform: capitalize;
+}
+
+.held-items-contains{
+  margin-top: 1rem;
 }
 
 .held-items-list {
@@ -138,12 +141,6 @@
   background: rgba(255, 255, 255, 0.5);
   border-radius: 12px;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  transition: all 0.2s ease;
-}
-
-.held-item:hover {
-  background: rgba(255, 255, 255, 0.8);
-  transform: translateX(4px);
 }
 
 .item-name {
@@ -154,8 +151,8 @@
 }
 
 .item-rarity {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #fee996 0%, #ffcc00 100%);
+  color: #0A174E;
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
   font-size: 0.8rem;

@@ -71,16 +71,6 @@
 
 .evolution-arrow {
   color: rgba(0, 0, 0, 0.3);
-  animation: slideArrow 1.5s ease-in-out infinite;
-}
-
-@keyframes slideArrow {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(5px);
-  }
 }
 
 @media (max-width: 768px) {

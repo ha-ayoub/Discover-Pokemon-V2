@@ -31,7 +31,6 @@
   font-weight: 600;
   font-size: 0.9rem;
   color: #666;
-  transition: all 0.3s ease;
 }
 
 .filter-btn:hover {
@@ -44,6 +43,12 @@
   border-color: gold;
   color: rgb(53, 83, 143);
   box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+}
+
+.filter-btn.active:hover {
+  background: white;
+  transform: none;
+  cursor: default;
 }
 
 .moves-list {
@@ -76,13 +81,6 @@
   padding: 0.75rem;
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.05);
-  transition: all 0.2s ease;
-}
-
-.move-item:hover {
-  background: rgba(255, 255, 255, 0.9);
-  transform: translateY(-2px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .move-info {
@@ -93,8 +91,8 @@
 }
 
 .move-level {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #fee996 0%, #ffcc00 100%);
+  color: #0A174E;
   padding: 0.25rem 0.5rem;
   border-radius: 12px;
   font-size: 0.75rem;

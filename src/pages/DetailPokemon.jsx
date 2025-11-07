@@ -27,7 +27,7 @@ export default function DetailPokemon() {
   } = usePokemon(pokemonName);
 
   if (loading) return <LoadingSpinner />;
-  
+
   if (error) {
     return (
       <div className="error-screen">
@@ -48,7 +48,14 @@ export default function DetailPokemon() {
       <div className="detail-container maxWidth">
         <div className="detail-header">
           <Link to="/">
-            <Button label={<><ArrowLeft size={18} /> Back</>} />
+            <Button
+              label={
+                <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
+                  <ArrowLeft size={18} />
+                  Back
+                </span>
+              }
+            />
           </Link>
         </div>
 
@@ -92,7 +99,7 @@ export default function DetailPokemon() {
 
             <div className="section-card">
               <h3>Type Effectiveness</h3>
-              
+
               {typeEffectiveness.weaknesses.length > 0 && (
                 <div className="effectiveness-group">
                   <h4>Weak to:</h4>
@@ -137,9 +144,7 @@ export default function DetailPokemon() {
           </div>
 
           {species?.evolution_chain && (
-            <div className="section-card full-width">
-              <Evolution evolutionChainUrl={species.evolution_chain.url} />
-            </div>
+            <Evolution evolutionChainUrl={species.evolution_chain.url} />
           )}
         </div>
       </div>

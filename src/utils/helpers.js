@@ -120,3 +120,22 @@ export function formatStatName(statName) {
   };
   return nameMap[statName] || statName;
 }
+
+export function filtreMoves(moves){
+  return moves.reduce((acc, moveData) => {
+    moveData.version_group_details.forEach(detail => {
+      const method = detail.move_learn_method.name;
+      if (!acc[method]) acc[method] = [];
+      
+      const exists = acc[method].some(item => item.name === moveData.move.name && item.level === detail.level_learned_at);
+      if (!exists) {
+        acc[method].push({
+          name: moveData.move.name,
+          level: detail.level_learned_at
+        });
+      }
+
+    });
+    return acc;
+  }, {});
+}
