@@ -13,6 +13,7 @@ import { ArrowLeft } from 'lucide-react';
 import { TYPE_GRADIENTS } from '../constants';
 import { formatPokemonId } from '../utils/helpers';
 import '../styles/DetailPokemon.css';
+import OpenPokeball from "../assets/open-pokeball.png"
 import Signature from '../components/layout/Signature';
 
 export default function DetailPokemon() {
@@ -32,6 +33,7 @@ export default function DetailPokemon() {
   if (error) {
     return (
       <div className="error-screen">
+        <img src={OpenPokeball}/>
         <h2>Pokémon not found!</h2>
         <p>{error}</p>
         <Link to="/">
