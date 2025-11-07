@@ -113,7 +113,9 @@
 }
 
 .habitat-icon {
-  font-size: 2.5rem;
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
 }
 
 .habitat-name {

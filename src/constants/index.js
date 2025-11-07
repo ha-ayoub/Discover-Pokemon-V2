@@ -1,3 +1,13 @@
+import caveImg from "../assets/habitats/cave.png";
+import forestImg from "../assets/habitats/forest.png";
+import grasslandImg from "../assets/habitats/grassland.png";
+import mountainImg from "../assets/habitats/mountain.png";
+import rareImg from "../assets/habitats/rare.png";
+import roughTerrainImg from "../assets/habitats/rough-terrain.png";
+import seaImg from "../assets/habitats/sea.png";
+import urbanImg from "../assets/habitats/urban.png";
+import watersEdgeImg from "../assets/habitats/waters-edge.png";
+
 export const TYPE_COLORS = {
   normal: "#A8A77A",
   fire: "#EE8130",
@@ -84,15 +94,15 @@ export const GROWTH_RATES = {
 };
 
 export const HABITATS = {
-  cave: { name: "Cave", icon: "🗻", color: "#795548" },
-  forest: { name: "Forest", icon: "🌲", color: "#4CAF50" },
-  grassland: { name: "Grassland", icon: "🌾", color: "#8BC34A" },
-  mountain: { name: "Mountain", icon: "⛰️", color: "#9E9E9E" },
-  rare: { name: "Rare", icon: "✨", color: "#FFD700" },
-  "rough-terrain": { name: "Rough Terrain", icon: "🏔️", color: "#A1887F" },
-  sea: { name: "Sea", icon: "🌊", color: "#2196F3" },
-  urban: { name: "Urban", icon: "🏙️", color: "#607D8B" },
-  "waters-edge": { name: "Waters Edge", icon: "🏖️", color: "#00BCD4" },
+  cave: { name: "Cave", image: caveImg, color: "#795548" },
+  forest: { name: "Forest", image: forestImg, color: "#4CAF50" },
+  grassland: { name: "Grassland", image: grasslandImg, color: "#8BC34A" },
+  mountain: { name: "Mountain", image: mountainImg, color: "#9E9E9E" },
+  rare: { name: "Rare", image: rareImg, color: "#FFD700" },
+  "rough-terrain": { name: "Rough Terrain", image: roughTerrainImg, color: "#A1887F" },
+  sea: { name: "Sea", image: seaImg, color: "#2196F3" },
+  urban: { name: "Urban", image: urbanImg, color: "#607D8B" },
+  "waters-edge": { name: "Waters Edge", image: watersEdgeImg, color: "#00BCD4" },
 };
 
 export const CAPTURE_DIFFICULTY = {
