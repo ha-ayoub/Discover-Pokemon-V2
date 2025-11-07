@@ -6,6 +6,8 @@ import StatsChart from '../components/pokemon/StatsChart';
 import TypeBadge from '../components/pokemon/TypeBadge';
 import Abilities from '../components/pokemon/Abilities';
 import Evolution from '../components/pokemon/Evolution';
+import Moves from '../components/pokemon/Moves';
+import GameInfo from '../components/pokemon/GameInfo';
 import Button from '../components/common/Button';
 import { ArrowLeft } from 'lucide-react';
 import { TYPE_GRADIENTS } from '../constants';
@@ -79,6 +81,10 @@ export default function DetailPokemon() {
         </div>
 
         <div className="detail-sections">
+          <div className="section-card full-width">
+            <GameInfo species={species} pokemon={pokemon} />
+          </div>
+
           <div className="section-row">
             <div className="section-card">
               <Abilities abilities={pokemon.abilities} />
@@ -124,6 +130,10 @@ export default function DetailPokemon() {
 
           <div className="section-card full-width">
             <StatsChart stats={stats} primaryType={primaryType} />
+          </div>
+
+          <div className="section-card full-width">
+            <Moves moves={pokemon.moves} />
           </div>
 
           {species?.evolution_chain && (

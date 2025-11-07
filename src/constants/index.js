@@ -48,13 +48,9 @@ export const API_ENDPOINTS = {
   EVOLUTION_CHAIN: "https://pokeapi.co/api/v2/evolution-chain",
 };
 
-
 export const ITEMS_PER_PAGE = 50;
 export const MAX_POKEMON = 1302;
-
-
 export const CACHE_DURATION = 5 * 60 * 1000;
-
 
 export const TYPE_EFFECTIVENESS = {
   normal: { weak: ["fighting"], resistant: [], immune: ["ghost"] },
@@ -75,4 +71,37 @@ export const TYPE_EFFECTIVENESS = {
   dark: { weak: ["fighting", "bug", "fairy"], resistant: ["ghost", "dark"], immune: ["psychic"] },
   steel: { weak: ["fire", "fighting", "ground"], resistant: ["normal", "grass", "ice", "flying", "psychic", "bug", "rock", "dragon", "steel", "fairy"], immune: ["poison"] },
   fairy: { weak: ["poison", "steel"], resistant: ["fighting", "bug", "dark"], immune: ["dragon"] },
+};
+
+export const GROWTH_RATES = {
+  slow: { name: "Slow", color: "#e74c3c" },
+  "medium-slow": { name: "Medium Slow", color: "#e67e22" },
+  medium: { name: "Medium", color: "#f39c12" },
+  "medium-fast": { name: "Medium Fast", color: "#2ecc71" },
+  fast: { name: "Fast", color: "#27ae60" },
+  erratic: { name: "Erratic", color: "#9b59b6" },
+  fluctuating: { name: "Fluctuating", color: "#3498db" },
+};
+
+export const HABITATS = {
+  cave: { name: "Cave", icon: "🗻", color: "#795548" },
+  forest: { name: "Forest", icon: "🌲", color: "#4CAF50" },
+  grassland: { name: "Grassland", icon: "🌾", color: "#8BC34A" },
+  mountain: { name: "Mountain", icon: "⛰️", color: "#9E9E9E" },
+  rare: { name: "Rare", icon: "✨", color: "#FFD700" },
+  "rough-terrain": { name: "Rough Terrain", icon: "🏔️", color: "#A1887F" },
+  sea: { name: "Sea", icon: "🌊", color: "#2196F3" },
+  urban: { name: "Urban", icon: "🏙️", color: "#607D8B" },
+  "waters-edge": { name: "Waters Edge", icon: "🏖️", color: "#00BCD4" },
+};
+
+export const CAPTURE_DIFFICULTY = {
+  getLevel: (rate) => {
+    if (rate >= 200) return { level: "Very Easy", color: "#4CAF50", percentage: 100 };
+    if (rate >= 120) return { level: "Easy", color: "#8BC34A", percentage: 80 };
+    if (rate >= 75) return { level: "Medium", color: "#FFC107", percentage: 60 };
+    if (rate >= 45) return { level: "Hard", color: "#FF9800", percentage: 40 };
+    if (rate >= 25) return { level: "Very Hard", color: "#FF5722", percentage: 25 };
+    return { level: "Extremely Hard", color: "#F44336", percentage: 10 };
+  }
 };
