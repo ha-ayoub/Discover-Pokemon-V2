@@ -1,0 +1,29 @@
+.type-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.type-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.type-badge.small {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.8rem;
+  border-radius: 15px;
+}
+
+.type-badge.large {
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 25px;
+}

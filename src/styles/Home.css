@@ -1,0 +1,50 @@
+.Home {
+  min-height: 100vh;
+  padding: 1rem;
+  background: #faf9f5;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.pagination {
+  margin-block: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.pagination button {
+  min-width: 120px;
+}
+
+.page-info {
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+}
+
+.btn {
+  background: linear-gradient(135deg, gold 0%, #ffed4e 100%);
+  color: rgb(53, 83, 143);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 215, 0, 0.4);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

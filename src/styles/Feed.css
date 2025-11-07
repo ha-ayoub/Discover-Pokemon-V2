@@ -1,0 +1,14 @@
+.pokemon-feed {
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .pokemon-feed {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+}
