@@ -7,7 +7,9 @@
 <h2 id="fr">🇫🇷 Version Française</h2>
 Ce projet est une application web interactive développée avec React, JavaScript et CSS, utilisant l’API publique PokeAPI pour afficher et explorer les différents Pokémon.
 
-✨ Fonctionnalités
+<br/><br/>
+✨ Fonctionnalités :
+
   🔍 Recherche & Navigation
 
     Recherche en temps réel avec suggestions auto-complètes
@@ -55,7 +57,7 @@ Ce projet est une application web interactive développée avec React, JavaScrip
 
   🛠️ Technologies
 
-    React 18 - Framework UI
+    React 19 - Framework UI
     React Router - Navigation
     Recharts - Visualisation de données
     Lucide React - Icônes modernes
@@ -68,6 +70,7 @@ Ce projet est une application web interactive développée avec React, JavaScrip
 This project is an interactive web application built with React, JavaScript, and CSS, using the PokeAPI to display and explore all Pokémon.
 
 ✨ Features :
+
  🔍 Search & Navigation
 
       Real-time search with autocomplete suggestions
@@ -115,7 +118,7 @@ This project is an interactive web application built with React, JavaScript, and
 
   🛠️ Technologies
 
-    React 18 - UI Framework
+    React 189 - UI Framework
     React Router - Navigation
     Recharts - Data visualization
     Lucide React - Modern icons
